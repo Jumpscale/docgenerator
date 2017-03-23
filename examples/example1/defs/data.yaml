@@ -1,0 +1,5 @@
+color: green
+imp: high
+somelist:
+    - a
+    - b
