@@ -1,5 +1,5 @@
 
-def mermaid(self, name, content, width=2048):
+def mermaid(doc, name, content, width=2048):
     path = j.sal.fs.getTmpFilePath()
     content2 = ""
     for item in content.split("\n"):

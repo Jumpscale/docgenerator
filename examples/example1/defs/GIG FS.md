@@ -6,10 +6,13 @@
 
 some text
 
-<!--include:test5-->
+```
+!!!include("test5")
+```
 
-<!--macro:dot e.g. http://www.graphviz.org/content/cluster-->
+
 ```js
+!!!dot("dot_test")
 digraph G {
 
 	subgraph cluster_0 {
@@ -43,7 +46,7 @@ digraph G {
 
 <!---macro:meta-->
 ```yaml
-#META
+!!!
 alias: gig_fs
 tag: g8os
 ```

@@ -1,18 +1,25 @@
 
-def include(self, name):
+def include(doc, name, **args):
     name = name.lower()
-    if name in self._contentPaths:
-        newcontent0 = j.sal.fs.fileGetContents(self._contentPaths[name])
 
-        newcontent = ""
+    doc = j.tools.docgenerator.getDoc(name, die=False)
+    if doc != None:
+        doc.process()
 
-        pre = "#" * self.last_level
+        newcontent = doc.content
 
-        for line in newcontent0.split("\n"):
-            if line.find("#") != -1:
-                line = pre + line
-            newcontent += "%s\n" % line
+    # if name in self._contentPaths:
+    #     newcontent0 = j.sal.fs.fileGetContents(self._contentPaths[name])
+    #
+    #     newcontent = ""
+    #
+    #     pre = "#" * self.last_level
+    #
+    #     for line in newcontent0.split("\n"):
+    #         if line.find("#") != -1:
+    #             line = pre + line
+    #         newcontent += "%s\n" % line
 
     else:
-        newcontent = "COULD NOT INCLUDE:%s (not found)" % name
+        newcontent = "ERROR: COULD NOT INCLUDE:%s (not found)" % name
     return newcontent
