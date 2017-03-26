@@ -1,10 +1,17 @@
-baseurl = "http://localhost:1313/"
+
+name ="js8_lots"
+depends = ["https://github.com/Jumpscale/jumpscale_core8/tree/8.1.2/docs",
+        "https://github.com/Jumpscale/jscockpit",
+        "https://github.com/Jumpscale/ays_jumpscale8/tree/8.2.0"]
+
+
+baseurl = "http://localhost:1313/js8_lots/"
 languageCode = "en-us"
-title = "Blogs Demo"
+title = "Definitions Demo"
 theme = "hugo_theme_beg"
 preserveTaxonomyNames = true
-paginate = 3
-disqusShortname = "shortname"
+paginate = 5
+disqusShortname = "despiegk"
 googleAnalytics = ""
 
 [params]
