@@ -1,11 +1,14 @@
 # docgenerator
 
+## pre-requisites
+
+- jumpscale 8.2 (https://github.com/Jumpscale/jumpscale_core8/tree/8.2.0)
+
 ## to install
 
+- see install section in [docs](/docs/docgenerator.md)
 - make sure you install caddy with required plugins: https://caddyserver.com/download
   - e.g. filemanager is required
-- now follow install instructions on our docs (see below)
-
 
 ## how to get started
 
