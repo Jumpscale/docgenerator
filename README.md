@@ -5,12 +5,15 @@
 - make sure you install caddy with required plugins: https://caddyserver.com/download
   - e.g. filemanager is required
 - now follow install instructions on our docs (see below)
- 
+
 
 ## how to get started
 
 ```
-j.tools.docgenerator.generateExamples()
+#to generate example docs only
+js 'j.tools.docgenerator.generateExamples()'
+#to generate jumpscale docs & example docs
+js 'j.tools.docgenerator.generateJSDoc()'
 ```
 
 - will generate some example documentation site in /optvar/docgenerator
