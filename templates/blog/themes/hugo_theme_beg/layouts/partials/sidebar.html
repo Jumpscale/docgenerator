@@ -1,14 +1,14 @@
 
 <aside class="l-sidebar">
 
-  {{ if (getenv "HUGO_ENV") "DEV" }} 
+  {{ if (getenv "HUGO_ENV") "DEV" }}
   <section class="panel panel-default">
     <div class="panel-heading">
       <div class="panel-title">LATESTS</div>
     </div>
     <div class="list-group">
       {{ range first 10 .Site.Pages }}
-      <a href="{{ .Permalink }}" class="list-group-item">{{ .Title }}</a>
+      <a href="{{ .Permalink }}" class="list-group-item">{{ .Title }}/</a>
       {{ end }}
     </div>
   </section>
@@ -21,7 +21,7 @@
     </div>
     <div class="list-group">
       {{ range first 10 $value.ByCount }}
-      <a href="{{ $.Site.BaseURL}}{{ $key }}/{{ .Name | urlize }}" class="list-group-item">{{ .Name }}</a>
+      <a href="{{ $.Site.BaseURL}}{{ $key }}/{{ .Name | urlize }}/" class="list-group-item">{{ .Name }}</a>
       {{ end }}
     </div>
   </section>
