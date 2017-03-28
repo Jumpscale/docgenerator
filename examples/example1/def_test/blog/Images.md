@@ -14,6 +14,6 @@ brabrabra # Displayed below of the image.
 
 ```
 !!!
-tags= ["else"]
+tags= ["test"]
 title = "Images Test"
 ```

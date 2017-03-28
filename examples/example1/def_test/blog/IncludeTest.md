@@ -7,7 +7,9 @@
 !!!include("test5")
 ```
 
-
+```
+!!!include("jsportal:howto")
+```
 
 ## source of this test doc
 
@@ -19,6 +21,12 @@
 \`\`\`
 !!!include("test5")
 \`\`\`
+
+#next will include howto doc from jsportal site
+\`\`\`
+!!!include("jsportal:howto")
+\`\`\`
+
 
 ```
 

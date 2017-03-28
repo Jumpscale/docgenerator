@@ -2,11 +2,23 @@
 def include(doc, name, **args):
     name = name.lower()
 
-    doc = j.tools.docgenerator.getDoc(name, die=False)
-    if doc != None:
-        doc.process()
+    if name.find(":") == -1:
+        doc = doc.docSite.getDoc(name, die=False)
+        if doc != None:
+            doc.process()
+            newcontent = doc.content
+        else:
+            newcontent = "ERROR: COULD NOT INCLUDE:%s (not found)" % name
 
-        newcontent = doc.content
+    else:
+        docsiteName, name = name.split(":")
+        docsite = j.tools.docgenerator.getDocSite(docsiteName)
+        doc = docsite.getDoc(name, die=False)
+        if doc != None:
+            doc.process()
+            newcontent = doc.content
+        else:
+            newcontent = "ERROR: COULD NOT INCLUDE:%s:%s (not found)" % (docsiteName, name)
 
     # if name in self._contentPaths:
     #     newcontent0 = j.sal.fs.fileGetContents(self._contentPaths[name])
@@ -20,6 +32,4 @@ def include(doc, name, **args):
     #             line = pre + line
     #         newcontent += "%s\n" % line
 
-    else:
-        newcontent = "ERROR: COULD NOT INCLUDE:%s (not found)" % name
     return newcontent
