@@ -4,7 +4,7 @@
 {{% img src="/static/balance-inspiration-motivation-life-scene-wander-big.jpg" %}}
 
 
-{{% img src="/static/Piggy Bank_400.png" class="right" %}}
+{{% img src="img/Piggy Bank_400.png" class="right" %}}
 
 brabrabra # Displayed left of the image.
 
