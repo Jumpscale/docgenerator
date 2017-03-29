@@ -16,7 +16,8 @@ def mermaid(doc, name, content, width=1024):
             content2 += "%s\n" % item
         j.sal.fs.writeFile(filename=path, contents=content2)
         dest = j.sal.fs.joinPaths(j.sal.fs.getDirName(j.sal.fs.getDirName(doc.path)), "%s.png" % name)
-        csspath = "/opt/code/github/jumpscale/docgenerator/macros/cs.css"
+        cssUrl = "https://github.com/Jumpscale/docgenerator/tree/master/macros/cs.css"
+        csspath = j.clients.git.getContentPathFromURLorPath(cssUrl)
         cmd = "cd /tmp;mermaid -p '%s' -w %s -t %s" % (path, width, csspath)
         res = j.do.execute(cmd)
         path2 = path + ".png"
