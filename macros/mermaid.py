@@ -28,4 +28,4 @@ def mermaid(doc, name, content, width=1024):
 
         j.core.db.set("docgenerator:mermaid:%s" % name, md5)
 
-    return "![%s.png](%s.png)" % (name, name)
+    return "![%s.png](../../files/%s.png)" % (name, name)

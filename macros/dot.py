@@ -16,4 +16,4 @@ def dot(doc, name, content):
 
         j.core.db.set("docgenerator:dot:%s" % name, md5)
 
-    return "![%s.png](%s.png)" % (name, name)
+    return "![%s.png](../../files/%s.png)" % (name, name)

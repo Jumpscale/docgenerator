@@ -1,7 +1,7 @@
 
 # Images
 
-{{% img src="/static/balance-inspiration-motivation-life-scene-wander-big.jpg" %}}
+{{% img src="balance-inspiration-motivation-life-scene-wander-big.jpg" %}}
 
 
 {{% img src="img/Piggy Bank_400.png" class="right" %}}
