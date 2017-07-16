@@ -6,7 +6,7 @@
 ```
 !!!include("test5")
 ```
-# You need to generate ays9 repo as well
+
 ```
 !!!include("ays9:events")
 ```
@@ -22,7 +22,7 @@
 !!!include("test5")
 \`\`\`
 
-#next will include howto doc from jsportal site
+#next will include events doc from ays9 repo
 \`\`\`
 !!!include("ays9:events")
 \`\`\`
