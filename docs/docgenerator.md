@@ -7,7 +7,7 @@ optionally call pdf gitbook generator to produce pdf(s)
 # install required components
 
 ```
-js 'j.tools.docgenerator.installDeps()'
+js 'j.tools.docgenerator.install()'
 ```
 
 - IMPORTANT: need to check if all right plugins are installed of caddy e.g. the filemanager, if not do it manually
@@ -21,18 +21,14 @@ js 'j.tools.docgenerator.installDeps()'
 
 ## preprocess
 
-- docgenerator walks over all directories below a dir
-- docgenerator remembers when a .git repo & get's the url path
-- docgenerator identifies following types of dirs
-    - macros
-        - each dir called macros is considered to be a macros dir
-    - documentation
-        - file ```.docs``` is in the root of such a dir
-        - files in here can be definitions, documents, blogs, ...
-        - config.toml defines how to deal with the info in such a directory
-    - the directories are remembered together with their git counterparts
-- now all macro's are loaded
-- now all filenames are remembered (this is to let the include work)
+- [docgenerator](#docgenerator)
+- [install required components](#install-required-components)
+- [process](#process)
+    - [arguments are](#arguments-are)
+    - [preprocess](#preprocess)
+    - [process per doc directory (as found in previous step)](#process-per-doc-directory-as-found-in-previous-step)
+- [metadata](#metadata)
+    - [config.toml](#configtoml)
 
 ## process per doc directory (as found in previous step)
 

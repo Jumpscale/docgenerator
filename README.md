@@ -7,8 +7,6 @@
 ## to install
 
 - see install section in [docs](/docs/docgenerator.md)
-- make sure you install caddy with required plugins: https://caddyserver.com/download
-  - e.g. filemanager is required
 
 ## how to get started
 
