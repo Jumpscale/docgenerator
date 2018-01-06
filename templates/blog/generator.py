@@ -21,10 +21,9 @@ def generate(docsite):
     # cmd = "cd %s;hugo -b '%s' --noChmod --noTimes  -v --canonifyURLs" % (
     #     docsite.outpath, ws)
 
-    cmd = "cd %s;hugo --noChmod --noTimes  -v " % (
-        docsite.outpath)
+    cmd = "cd %s;hugo --noChmod --noTimes  -v " % (docsite.outpath)
 
     print(cmd)
-    j.do.execute(cmd)
+    j.sal.process.execute(cmd)
 
 #

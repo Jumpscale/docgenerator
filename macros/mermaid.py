@@ -1,7 +1,6 @@
 
 def mermaid(doc, name, content, width=1024):
 
-    # need to do something to make it faster
     md5 = j.data.hash.md5_string(content)
     md5 = bytes(md5.encode())
     md5b = j.core.db.get("docgenerator:mermaid:%s" % name)
@@ -19,7 +18,7 @@ def mermaid(doc, name, content, width=1024):
         cssUrl = "https://github.com/Jumpscale/docgenerator/tree/master/macros/cs.css"
         csspath = j.clients.git.getContentPathFromURLorPath(cssUrl)
         cmd = "cd /tmp;mermaid -p '%s' -w %s -t %s" % (path, width, csspath)
-        res = j.do.execute(cmd)
+        res = j.sal.process.execute(cmd)
         path2 = path + ".png"
         j.sal.fs.moveFile(path2, dest)
         j.sal.fs.remove(path2)
