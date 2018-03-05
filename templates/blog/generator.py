@@ -4,7 +4,7 @@ import pytoml
 
 def generate(docsite):
 
-    docsite.copyFiles("public/files")
+    docsite.files_copy("public/files")
 
     # for item in ["static/css", "static/js", "static/img", "themes"]:
     for item in ["static/css", "static/js", "static/img", "themes"]:
@@ -21,7 +21,7 @@ def generate(docsite):
     # cmd = "cd %s;hugo -b '%s' --noChmod --noTimes  -v --canonifyURLs" % (
     #     docsite.outpath, ws)
 
-    cmd = "cd %s;hugo --noChmod --noTimes  -v " % (docsite.outpath)
+    cmd = "source $HOME/.bash_profile;cd %s;hugo --noChmod --noTimes  -v " % (docsite.outpath)
 
     print(cmd)
     j.sal.process.execute(cmd)

@@ -1,7 +1,8 @@
 
 name ="example1"
-depends = ["https://github.com/Jumpscale/core9/tree/master/docs",
-        "https://github.com/Jumpscale/ays9/tree/master/docs"]
+depends = ["https://github.com/Jumpscale/lib9/tree/9.3.0_ssh/docs",
+    "https://github.com/Jumpscale/core9/tree/9.3.0_ssh/docs",
+    "https://github.com/Jumpscale/prefab9/tree/9.3.0_ssh/docs"]
 
 
 languageCode = "en-us"

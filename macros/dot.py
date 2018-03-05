@@ -11,7 +11,7 @@ def dot(doc, name, content):
         dest = j.sal.fs.joinPaths(j.sal.fs.getDirName(doc.path), "%s.png" % name)
         j.sal.process.execute("dot '%s' -Tpng > '%s'" % (path, dest))
         j.sal.fs.remove(path)
-        doc.docSite.addFile(dest)
+        doc.docsite.addFile(dest)
         j.core.db.set("docgenerator:dot:%s" % name, md5)
 
     return "![%s.png](../../files/%s.png)" % (name, name)

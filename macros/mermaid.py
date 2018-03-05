@@ -23,7 +23,7 @@ def mermaid(doc, name, content, width=1024):
         j.sal.fs.moveFile(path2, dest)
         j.sal.fs.remove(path2)
         j.sal.fs.remove(path)
-        doc.docSite.addFile(dest)
+        doc.docsite.addFile(dest)
 
         j.core.db.set("docgenerator:mermaid:%s" % name, md5)
 
