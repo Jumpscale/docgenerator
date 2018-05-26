@@ -1,15 +1,16 @@
-name = "{{obj.git.name}}"
-description = ""
-depends = []
-theme = "{{obj.theme}}"
-template = "{{obj.template}}"
+name ="example2"
+depends = ["core9,https://github.com/Jumpscale/core9/tree/development",
+    "lib9,https://github.com/Jumpscale/lib9/tree/development"]
+
+template = "https://github.com/Jumpscale/docgenerator/tree/master/templates/docsify"
 
 baseURL = "/"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
 title = "DocDock Documentation"
-theme = "docdock"
+
+
 # themesdir = "../.."
 pygmentsCodeFences = true
 pygmentsStyle = "monokailight"

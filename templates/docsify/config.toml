@@ -1,0 +1,5 @@
+name = "{{obj.git.name}}"
+description = ""
+depends = []
+theme = "{{obj.theme}}"
+template = "{{obj.template}}"

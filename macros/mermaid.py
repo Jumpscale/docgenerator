@@ -1,30 +1,6 @@
 
 def mermaid(doc, name, content, width=1024):
+    
+    #TODO: *1 needs to be redone to use mermaid pure in javascript
 
-    md5 = j.data.hash.md5_string(content)
-    md5 = bytes(md5.encode())
-    md5b = j.core.db.get("docgenerator:mermaid:%s" % name)
-
-    if md5b != md5:
-        path = j.sal.fs.getTmpFilePath()
-        content2 = ""
-        for item in content.split("\n"):
-            itemstrip = item.strip()
-            if itemstrip != "" and itemstrip[0] == "%":
-                continue
-            content2 += "%s\n" % item
-        j.sal.fs.writeFile(filename=path, contents=content2)
-        dest = j.sal.fs.joinPaths(j.sal.fs.getDirName(j.sal.fs.getDirName(doc.path)), "%s.png" % name)
-        cssUrl = "https://github.com/Jumpscale/docgenerator/tree/master/macros/cs.css"
-        csspath = j.clients.git.getContentPathFromURLorPath(cssUrl)
-        cmd = "cd /tmp;mermaid -p '%s' -w %s -t %s" % (path, width, csspath)
-        res = j.sal.process.execute(cmd)
-        path2 = path + ".png"
-        j.sal.fs.moveFile(path2, dest)
-        j.sal.fs.remove(path2)
-        j.sal.fs.remove(path)
-        doc.docsite.addFile(dest)
-
-        j.core.db.set("docgenerator:mermaid:%s" % name, md5)
-
-    return "![%s.png](../../files/%s.png)" % (name, name)
+    return "TODO: *1 mermaid macro not implemented yet"

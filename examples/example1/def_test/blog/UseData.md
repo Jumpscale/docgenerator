@@ -19,9 +19,3 @@ source was
 {{/somelist}}
 ```
 
-```toml
-!!!
-title = "Use Data"
-date = "2017-03-02"
-tags= ["test"]
-```

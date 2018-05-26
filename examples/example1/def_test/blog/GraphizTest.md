@@ -1,4 +1,3 @@
-
 # Dot Test
 
 for examples of graphiz see
@@ -78,9 +77,3 @@ digraph G {
 
 ```
 
-```toml
-!!!
-title = "DigraphTest"
-date = "2017-03-02"
-tags= ["test"]
-```
