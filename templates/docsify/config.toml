@@ -3,3 +3,6 @@ description = ""
 depends = []
 theme = "{{obj.theme}}"
 template = "{{obj.template}}"
+
+site_name = 'a site name'
+disqus = 'a-disqus-name'

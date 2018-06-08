@@ -6,6 +6,17 @@ def generate(docsite):
 
     docsite.files_copy()
 
+    src = j.sal.fs.joinPaths(docsite.template_path,"root")
+
+    j.sal.fs.copyDirTree(src,docsite.outpath,ignoredir=['.egg-info', '.dist-info','__pycache__'])
+
+    ipath = j.sal.fs.joinPaths(docsite.template_path,"index.html")
+
+    
+
+    from IPython import embed;embed(colors='Linux')
+    docsite.outpath
+
     # # for item in ["static/css", "static/js", "static/img", "themes"]:
     # for item in ["static/css", "static/js", "static/img", "themes"]:
     #     j.sal.fs.symlink("%s/%s" % (docsite.templatePath, item), "%s/%s" % (docsite.outpath, item))
