@@ -1,0 +1,19 @@
+
+[[docs]]
+name = "core9"
+url = "https://github.com/Jumpscale/core9/tree/development"
+
+[[docs]]
+name = "tf_home"
+url = "https://github.com/threefoldfoundation/tree/info_foundation"
+
+[[docs]]
+name = "example2"
+path = "content" #starts from directly where we start js9_doc ...
+
+[config]
+disqus = 'a-disqus-name'
+template = "https://github.com/Jumpscale/docgenerator/tree/master/templates/docsify"
+doc_add_meta = false
+
+

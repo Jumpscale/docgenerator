@@ -8,7 +8,7 @@ def generate(docsite):
 
     src = j.sal.fs.joinPaths(docsite.template_path,"root")
 
-    j.sal.fs.copyDirTree(src,docsite.outpath,ignoredir=['.egg-info', '.dist-info','__pycache__'])
+    j.sal.fs.copyDirTree(src,docsite.outpath,ignoredir=['.egg-info', '.dist-info','__pycache__','.nojekyll'])
 
     ipath = j.sal.fs.joinPaths(docsite.template_path,"index.html")
 

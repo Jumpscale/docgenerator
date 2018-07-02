@@ -1,0 +1,58 @@
+:80 {
+    bind 0.0.0.0
+    gzip
+    root .
+
+    git {
+        repo https://github.com/threefoldfoundation/www_foundation.git
+        branch master
+        hook /github/pull "zU3687$aJEb6"
+        path .
+    }
+
+    git {
+        repo ssh://git@docs.grid.tf:7022/threefold/community_data.git
+        branch master
+        hook /gitea/pull/community_data "zU3687$aJEb6"
+        key ~/.ssh/id_rsa
+        path ../community_data
+        then python3 community.py
+    }
+
+    git {
+        repo ssh://git@docs.greenitglobe.com:10022/gig/data_team.git
+        branch master
+        hook /gitea/pull/data_team "zU3687$aJEb6"
+        key ~/.ssh/id_rsa
+        path ../gig/data_team/
+        then python3 process.py
+        then git reset --hard HEAD
+        then git -C "../../threefold/data_team" reset --hard HEAD
+        then git -C "../../bettertoken/data_team" reset --hard HEAD
+    }
+
+    git {
+        repo ssh://git@docs.grid.tf:7022/threefold/data_team.git
+        branch master
+        hook /gitea/pull/tf_data_team "zU3687$aJEb6"
+        key ~/.ssh/id_rsa
+        path ../threefold/data_team/
+        then python3 ../../gig/data_team/process.py
+        then git reset --hard HEAD
+        then git -C "../../bettertoken/data_team" reset --hard HEAD
+        then git -C "../../gig/data_team" reset --hard HEAD
+    }
+
+    git {
+        repo ssh://git@docs.grid.tf:7022/bettertoken/data_team.git
+        branch master
+        hook /gitea/pull/bt_data_team "zU3687$aJEb6"
+        key ~/.ssh/id_rsa
+        path ../bettertoken/data_team/
+        then python3 ../../gig/data_team/process.py
+        then git reset --hard HEAD
+        then git -C "../../gig/data_team" reset --hard HEAD
+        then git -C "../../threefold/data_team" reset --hard HEAD
+    }
+
+}
