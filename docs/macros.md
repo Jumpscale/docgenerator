@@ -15,6 +15,11 @@ the first line is the macroname with arguments
 
 everything below is given as payload to the macro itself
 
+it can also be in a code block, where first line is above and then the data below is given to the macro (raw)
+so the macro can decide what to do with it.
+
+
+
 ## example of a macro
 
 ```python
